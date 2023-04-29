@@ -2,6 +2,7 @@ export const pages = [
 	{
 		id: 1,
 		title: 'Page transitions',
+		color: '#ff004f',
 		children: [
 			{
 				id: 'rectangle-transition',
@@ -10,7 +11,6 @@ export const pages = [
 				Motion. This example showcase the capabilities of the library and demonstrate
 				how it can be used to create seamless transitions between pages or components.`,
 				link: '/rectangle-transition',
-				tech: ['framer-motion'],
 			},
 			{
 				id: 'clip-path-transition',
@@ -19,16 +19,46 @@ export const pages = [
 				Motion. This example showcase the capabilities of the library and demonstrate
 				how it can be used to create seamless transitions between pages or components.`,
 				link: '/clip-path-transition',
-				tech: ['framer-motion'],
 			},
 			{
 				id: 'tile-transition',
 				title: 'Tile Page Transition',
-				description: `On this page, you will find clip path page transition example, done with Framer 
+				description: `On this page, you will find tile page transition example, done with Framer 
 				Motion. This example showcase the capabilities of the library and demonstrate
 				how it can be used to create seamless transitions between pages or components.`,
 				link: '/tile-transition',
-				tech: ['framer-motion'],
+			},
+			{
+				id: 'tile-transition',
+				title: 'Image seamless transition',
+				description: `On this page, you will find tile seamless image transition`,
+				link: '/seamless-image-transition',
+			},
+		],
+	},
+	{
+		id: 2,
+		title: 'Custom cursor',
+		color: 'yellow',
+		children: [
+			{
+				id: 'custom-cursor',
+				title: 'Custom Cursor',
+				description: `TODO`,
+				link: '/custom-cursor',
+			},
+		],
+	},
+	{
+		id: 3,
+		title: 'Custom scrollbar',
+		color: 'lime',
+		children: [
+			{
+				id: 'custom-scrollbar',
+				title: 'Custom Scrollbar',
+				description: `TODO`,
+				link: '/custom-scrollbar',
 			},
 		],
 	},

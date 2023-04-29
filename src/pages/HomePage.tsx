@@ -16,12 +16,20 @@ const HomePage = () => {
 	return (
 		<section>
 			<h1>React playground</h1>
+			<p>
+				Work in progress, I&apos;m trying to figure the way to organise this app
+			</p>
 			{pages.map((page) => (
 				<section key={page.id}>
 					<h2>{page.title}</h2>
 					<HomeGridStyled>
 						{page.children?.map((children, index) => (
-							<Card key={children.id} index={index + 1} {...children} />
+							<Card
+								key={children.id}
+								index={index + 1}
+								color={page.color}
+								{...children}
+							/>
 						))}
 					</HomeGridStyled>
 				</section>

@@ -10,6 +10,7 @@ interface CardProps extends Omit<HTMLAttributes<HTMLDivElement>, 'children'> {
 	index: number;
 	title: string;
 	description: string;
+	color: string;
 	link: string;
 }
 

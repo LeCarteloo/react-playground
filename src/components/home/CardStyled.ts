@@ -1,7 +1,11 @@
 import { Link } from 'react-router-dom';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
-export const CardStyled = styled.div`
+interface CardStyledProps {
+	color: string;
+}
+
+export const CardStyled = styled.div<CardStyledProps>`
 	position: relative;
 	border-radius: 2em;
 	padding: 1.5em;
@@ -25,7 +29,11 @@ export const CardStyled = styled.div`
 		transition-duration: 0.6s;
 		top: 80%;
 		left: -1px;
-		background: linear-gradient(transparent, #ff004f, transparent);
+		${({ color }) =>
+			color &&
+			css`
+				background: linear-gradient(transparent, ${color}, transparent);
+			`}
 		opacity: 0;
 	}
 
@@ -38,7 +46,11 @@ export const CardStyled = styled.div`
 		}
 
 		h3 {
-			color: #ff004f;
+			${({ color }) =>
+				color &&
+				css`
+					color: ${color};
+				`}
 		}
 	}
 `;
