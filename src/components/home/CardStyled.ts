@@ -25,7 +25,7 @@ export const CardStyled = styled.div`
 		transition-duration: 0.6s;
 		top: 80%;
 		left: -1px;
-		background: linear-gradient(transparent, lime, transparent);
+		background: linear-gradient(transparent, #ff004f, transparent);
 		opacity: 0;
 	}
 
@@ -37,13 +37,14 @@ export const CardStyled = styled.div`
 			opacity: 1;
 		}
 
-		h2 {
-			color: lime;
+		h3 {
+			color: #ff004f;
 		}
 	}
 `;
 
-export const HeadingStyled = styled.h2`
+export const HeadingStyled = styled.h3`
+	font-size: 1.5rem;
 	transition-duration: 0.6s;
 `;
 
