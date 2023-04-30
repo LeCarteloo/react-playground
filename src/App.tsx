@@ -5,6 +5,8 @@ import { AnimatePresence } from 'framer-motion';
 import ClipPathTransition from './pages/transitions/ClipPathTransition';
 import TileTransition from './pages/transitions/TileTransition';
 import CursorShowcase from './pages/cursors/CursorShowcase';
+import ImageTransition from './pages/transitions/ImageTransition';
+import InteractionsShowcase from './pages/interactions/InteractionsShowcase';
 
 function App() {
 	return (
@@ -22,6 +24,14 @@ function App() {
 							element={<ClipPathTransition />}
 						/>
 						<Route path="/tile-transition/*" element={<TileTransition />} />
+						<Route
+							path="/seamless-image-transition/*"
+							element={<ImageTransition />}
+						/>
+						<Route
+							path="/micro-interactions/*"
+							element={<InteractionsShowcase />}
+						/>
 						<Route path="/custom-cursor" element={<CursorShowcase />} />
 					</Routes>
 				</AnimatePresence>

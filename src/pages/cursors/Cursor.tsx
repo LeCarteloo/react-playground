@@ -91,14 +91,6 @@ const Cursor = () => {
 				transition={{
 					duration: 0.03,
 				}}
-
-				// animate={{
-				// 	x: cursorPosition.x - 10,
-				// 	y: cursorPosition.y - 10,
-				// 	// fill: 'forwards',
-				// 	width: '50px',
-				// 	height: '50px',
-				// }}
 			></OuterCircleStyled>
 			<InnerCircleStyled
 				variants={innerCircleVariants}

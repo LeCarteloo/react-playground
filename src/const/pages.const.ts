@@ -38,6 +38,19 @@ export const pages = [
 	},
 	{
 		id: 2,
+		title: 'Micro interactions',
+		color: 'magenta',
+		children: [
+			{
+				id: 'micro-interactions',
+				title: 'Micro Interactions',
+				description: `A couple of micro interactions`,
+				link: '/micro-interactions',
+			},
+		],
+	},
+	{
+		id: 3,
 		title: 'Custom cursor',
 		color: 'yellow',
 		children: [
@@ -50,7 +63,7 @@ export const pages = [
 		],
 	},
 	{
-		id: 3,
+		id: 4,
 		title: 'Custom scrollbar',
 		color: 'lime',
 		children: [
