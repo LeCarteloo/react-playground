@@ -34,6 +34,12 @@ export const pages = [
 				description: `On this page, you will find tile seamless image transition`,
 				link: '/seamless-image-transition',
 			},
+			{
+				id: 'blob-transition',
+				title: 'Blob transition',
+				description: `TODO`,
+				link: '/blob-transition',
+			},
 		],
 	},
 	{

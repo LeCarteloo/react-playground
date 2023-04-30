@@ -11,6 +11,7 @@ const TransitionWrapperStyled = styled(motion.div)`
 
 const ClipPathTransition = () => {
 	const { pathname } = useLocation();
+
 	return (
 		<AnimatePresence mode="wait">
 			<TransitionWrapperStyled

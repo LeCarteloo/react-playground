@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import { BsArrowRight } from 'react-icons/bs';
 import { motion } from 'framer-motion';
 import { useState } from 'react';
+
 const ArrowButtonStyled = styled(motion.button)`
 	position: relative;
 	width: 50px;
@@ -32,10 +33,13 @@ const ArrowStyled = styled(BsArrowRight)`
 const ArrowButton = () => {
 	const [isHovering, setIsHovering] = useState(false);
 
+	console.log(isHovering);
+
 	return (
 		<ArrowButtonStyled
 			onHoverStart={() => setIsHovering(true)}
 			onHoverEnd={() => setIsHovering(false)}
+			onFocus={() => setIsHovering(!isHovering)}
 		>
 			<ArrowWrapperStyled
 				key={'first'}

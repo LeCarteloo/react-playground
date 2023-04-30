@@ -26,7 +26,10 @@ const ButtonStyled = styled.button`
 	overflow: hidden;
 	isolation: isolate;
 	cursor: pointer;
-	:hover {
+	outline: none;
+
+	:hover,
+	:focus-within {
 		> ${CircleStyled} {
 			width: 500px;
 			height: 500px;

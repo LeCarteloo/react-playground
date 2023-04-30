@@ -8,6 +8,7 @@ import CursorShowcase from './pages/cursors/CursorShowcase';
 import ImageTransition from './pages/transitions/ImageTransition';
 import InteractionsShowcase from './pages/interactions/InteractionsShowcase';
 import SvgAnimationShowcase from './pages/svg-animations/SvgAnimationShowcase';
+import BlobTransition from './pages/transitions/BlobTransition';
 
 function App() {
 	return (
@@ -29,6 +30,7 @@ function App() {
 							path="/seamless-image-transition/*"
 							element={<ImageTransition />}
 						/>
+						<Route path="/blob-transition/*" element={<BlobTransition />} />
 						<Route
 							path="/micro-interactions/*"
 							element={<InteractionsShowcase />}

@@ -8,6 +8,7 @@ const FirstButton = () => {
 		border-radius: 50vw;
 		background-color: transparent;
 		cursor: pointer;
+		outline: none;
 
 		@keyframes moveText {
 			30% {
@@ -28,7 +29,8 @@ const FirstButton = () => {
 			}
 		}
 
-		:hover {
+		:hover,
+		:focus-within {
 			span:nth-child(1) {
 				animation: moveText 0.5s ease-in-out;
 			}
