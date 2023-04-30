@@ -7,6 +7,7 @@ import TileTransition from './pages/transitions/TileTransition';
 import CursorShowcase from './pages/cursors/CursorShowcase';
 import ImageTransition from './pages/transitions/ImageTransition';
 import InteractionsShowcase from './pages/interactions/InteractionsShowcase';
+import SvgAnimationShowcase from './pages/svg-animations/SvgAnimationShowcase';
 
 function App() {
 	return (
@@ -31,6 +32,10 @@ function App() {
 						<Route
 							path="/micro-interactions/*"
 							element={<InteractionsShowcase />}
+						/>
+						<Route
+							path="/svg-animations/*"
+							element={<SvgAnimationShowcase />}
 						/>
 						<Route path="/custom-cursor" element={<CursorShowcase />} />
 					</Routes>

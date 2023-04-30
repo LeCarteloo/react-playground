@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 import FirstButton from './FirstButton';
 import SecondButton from './SecondButton';
+import PlayButton from './PlayButton';
+import ArrowButton from './ArrowButton';
 
 const PaperStyled = styled.div`
 	padding: 2rem;
@@ -22,16 +24,20 @@ const InteractionsGrid = styled.div`
 `;
 
 const InteractionsShowcase = () => {
+	const microInteractions = [
+		<FirstButton />,
+		<SecondButton />,
+		<PlayButton />,
+		<ArrowButton />,
+	];
+
 	return (
 		<div>
 			<h1>Micro interactions showcase</h1>
 			<InteractionsGrid>
-				<PaperStyled>
-					<FirstButton />
-				</PaperStyled>
-				<PaperStyled>
-					<SecondButton />
-				</PaperStyled>
+				{microInteractions.map((element, index) => (
+					<PaperStyled key={index}>{element}</PaperStyled>
+				))}
 			</InteractionsGrid>
 		</div>
 	);

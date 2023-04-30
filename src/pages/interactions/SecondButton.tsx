@@ -7,7 +7,7 @@ const CircleStyled = styled(motion.div)`
 	width: 0;
 	height: 0;
 	inset: 0;
-	background-color: red;
+	background-color: blue;
 	border-radius: 50%;
 	transition-property: width, height;
 	transition-duration: 500ms;
@@ -25,6 +25,7 @@ const ButtonStyled = styled.button`
 	border-radius: 50vw;
 	overflow: hidden;
 	isolation: isolate;
+	cursor: pointer;
 	:hover {
 		> ${CircleStyled} {
 			width: 500px;

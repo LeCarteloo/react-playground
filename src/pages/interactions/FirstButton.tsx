@@ -7,6 +7,7 @@ const FirstButton = () => {
 		border: 1px solid #fff;
 		border-radius: 50vw;
 		background-color: transparent;
+		cursor: pointer;
 
 		@keyframes moveText {
 			30% {

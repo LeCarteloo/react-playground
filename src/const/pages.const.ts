@@ -29,7 +29,7 @@ export const pages = [
 				link: '/tile-transition',
 			},
 			{
-				id: 'tile-transition',
+				id: 'image-seamless-transition',
 				title: 'Image seamless transition',
 				description: `On this page, you will find tile seamless image transition`,
 				link: '/seamless-image-transition',
@@ -51,6 +51,19 @@ export const pages = [
 	},
 	{
 		id: 3,
+		title: 'SVG animations',
+		color: 'orange',
+		children: [
+			{
+				id: 'svg-animations',
+				title: 'SVG animations',
+				description: `TODO`,
+				link: '/svg-animations',
+			},
+		],
+	},
+	{
+		id: 4,
 		title: 'Custom cursor',
 		color: 'yellow',
 		children: [
@@ -63,7 +76,7 @@ export const pages = [
 		],
 	},
 	{
-		id: 4,
+		id: 5,
 		title: 'Custom scrollbar',
 		color: 'lime',
 		children: [
