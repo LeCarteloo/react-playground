@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import Image from '../../assets/image.jpg';
-import { AnimatePresence, motion, useAnimation } from 'framer-motion';
+import { AnimatePresence, motion } from 'framer-motion';
 import { Link, Route, Routes, useLocation } from 'react-router-dom';
 
 const WrapperStyled = styled.div`

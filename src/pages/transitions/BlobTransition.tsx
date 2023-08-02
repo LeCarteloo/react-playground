@@ -2,6 +2,7 @@ import { AnimatePresence, easeInOut, motion } from 'framer-motion';
 import { useEffect, useState } from 'react';
 import { Routes, Route, Link, useLocation } from 'react-router-dom';
 import styled from 'styled-components';
+import Image from '../../assets/image.jpg';
 
 const BlobStyled = styled(motion.div)`
 	position: absolute;
@@ -14,8 +15,16 @@ const BlobStyled = styled(motion.div)`
 	border-radius: 50%;
 `;
 
+const TransitionStyled = styled.div`
+	inset: 0;
+	width: 120%;
+	height: 200%;
+	position: fixed;
+	z-index: 1;
+`;
+
 const BlobTransition = () => {
-	const [transitionType, setTransitionType] = useState(1);
+	const [transitionType, setTransitionType] = useState(3);
 	const { pathname } = useLocation();
 
 	useEffect(() => {
@@ -28,11 +37,9 @@ const BlobTransition = () => {
 	const ellipseVariants = {
 		start: {
 			d: 'M1946 973C1946 1510.37 1510.37 1907 973 1907C435.627 1907 0 1510.37 0 973C0 435.627 435.627 0 973 0C1510.37 0 1946 435.627 1946 973Z',
-			y: '100%',
 		},
 		end: {
 			d: 'M2079 562.354C2079 1192.15 1568.38 55 938.5 55C308.619 55 -202 1192.15 -202 562.354C-202 -67.4461 308.619 -578 938.5 -578C1568.38 -578 2079 -67.4461 2079 562.354Z',
-			y: '-80%',
 		},
 	};
 
@@ -99,7 +106,28 @@ const BlobTransition = () => {
 		<div>
 			<button onClick={() => setTransitionType(0)}>First type</button>
 			<button onClick={() => setTransitionType(1)}>Second type</button>
-			<AnimatePresence mode="wait">{renderTransition()}</AnimatePresence>
+			{/* <AnimatePresence mode="wait">{renderTransition()}</AnimatePresence> */}
+			<TransitionStyled>
+				<motion.div
+					className="svg-clipped"
+					initial={{ y: '100%' }}
+					animate={{ y: '-100%' }}
+					transition={{ duration: 3 }}
+				/>
+			</TransitionStyled>
+			<svg height="0" width="0">
+				<defs>
+					<clipPath id="svgPath">
+						<motion.path
+							initial="start"
+							animate="end"
+							variants={ellipseVariants}
+							transition={{ duration: 3 }}
+						/>
+					</clipPath>
+				</defs>
+			</svg>
+
 			<Routes>
 				<Route
 					path="/"

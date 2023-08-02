@@ -24,3 +24,10 @@ body {
 	padding: 2em;
 	overflow-x: hidden;
 }
+
+.svg-clipped {
+	clip-path: url(#svgPath);
+	background-color: red;
+	width: 120%;
+	height: 100%;
+}

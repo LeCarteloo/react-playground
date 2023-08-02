@@ -9,6 +9,7 @@ import ImageTransition from './pages/transitions/ImageTransition';
 import InteractionsShowcase from './pages/interactions/InteractionsShowcase';
 import SvgAnimationShowcase from './pages/svg-animations/SvgAnimationShowcase';
 import BlobTransition from './pages/transitions/BlobTransition';
+import ScrollShowcase from './pages/scroll/ScrollShowcase';
 
 function App() {
 	return (
@@ -35,6 +36,7 @@ function App() {
 							path="/micro-interactions/*"
 							element={<InteractionsShowcase />}
 						/>
+						<Route path="/scroll-animations/*" element={<ScrollShowcase />} />
 						<Route
 							path="/svg-animations/*"
 							element={<SvgAnimationShowcase />}
