@@ -3,6 +3,7 @@ import FirstButton from './FirstButton';
 import SecondButton from './SecondButton';
 import PlayButton from './PlayButton';
 import ArrowButton from './ArrowButton';
+import Hamburger from './Hamburger';
 
 const PaperStyled = styled.div`
 	padding: 2rem;
@@ -29,6 +30,7 @@ const InteractionsShowcase = () => {
 		<SecondButton />,
 		<PlayButton />,
 		<ArrowButton />,
+		<Hamburger />,
 	];
 
 	return (
