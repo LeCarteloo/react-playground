@@ -4,6 +4,7 @@ import SecondButton from './SecondButton';
 import PlayButton from './PlayButton';
 import ArrowButton from './ArrowButton';
 import Hamburger from './Hamburger';
+import MagneticButton from './MagneticButton';
 
 const PaperStyled = styled.div`
 	padding: 2rem;
@@ -31,6 +32,7 @@ const InteractionsShowcase = () => {
 		<PlayButton />,
 		<ArrowButton />,
 		<Hamburger />,
+		<MagneticButton />,
 	];
 
 	return (
@@ -38,7 +40,9 @@ const InteractionsShowcase = () => {
 			<h1>Micro interactions showcase</h1>
 			<InteractionsGrid>
 				{microInteractions.map((element, index) => (
-					<PaperStyled key={index}>{element}</PaperStyled>
+					<PaperStyled key={index} style={{ position: 'relative' }}>
+						{element}
+					</PaperStyled>
 				))}
 			</InteractionsGrid>
 		</div>
